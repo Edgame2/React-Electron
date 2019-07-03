@@ -5,7 +5,7 @@ const {
 
 function createWindow() {
     // Create the browser window.     
-    win = new BrowserWindow({
+    var win = new BrowserWindow({
         width: 800,
         height: 600
     })

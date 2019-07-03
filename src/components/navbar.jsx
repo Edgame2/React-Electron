@@ -1,12 +1,9 @@
-import React from "react";
-import "./App.css";
-import Navbar from "react-bootstrap/Nav";
-import NavDropdown from "react-bootstrap/Nav";
-import Nav from "react-bootstrap/Nav";
+import Navbar from ".react-bootstrap/Navbar";
 
-function App() {
-  return (
-    <div className="App">
+class MyNavbar extends Component {
+  state = {};
+  render() {
+    return (
       <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
         <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -34,8 +31,8 @@ function App() {
           </Nav>
         </Navbar.Collapse>
       </Navbar>
-    </div>
-  );
+    );
+  }
 }
 
-export default App;
+export default MyNavbar;
