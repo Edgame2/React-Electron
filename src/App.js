@@ -1,12 +1,17 @@
 import React from "react";
-import "./App.css";
-import Navbar from "react-bootstrap/Nav";
-import NavDropdown from "react-bootstrap/Nav";
+import "./bootstrap.min.css";
+import Navbar from "react-bootstrap/Navbar";
+import NavDropdown from "react-bootstrap/NavDropdown";
 import Nav from "react-bootstrap/Nav";
+import NavItem from "react-bootstrap/NavItem";
+import Alertlist from "./components/Alertlist";
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import { LinkContainer } from 'react-router-bootstrap';
 
 function App() {
   return (
     <div className="App">
+      <Router>
       <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
         <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -27,13 +32,17 @@ function App() {
             </NavDropdown>
           </Nav>
           <Nav>
-            <Nav.Link href="#deets">More deets</Nav.Link>
+          <LinkContainer to="/alerts">
+              <NavItem>Signup</NavItem>
+            </LinkContainer>
             <Nav.Link eventKey={2} href="#memes">
               Dank memes
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Navbar>
+      <Route path="/alerts" component={ Alertlist } />
+      </Router>
     </div>
   );
 }

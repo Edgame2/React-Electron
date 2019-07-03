@@ -1,6 +1,9 @@
-import Navbar from ".react-bootstrap/Navbar";
+import React, { Component } from 'react';
+import Navbar from "react-bootstrap/Navbar";
+import NavDropdown from "react-bootstrap/NavDropdown";
+import Nav from "react-bootstrap/Nav";
 
-class MyNavbar extends Component {
+class Appnavbar extends Component {
   state = {};
   render() {
     return (
@@ -35,4 +38,4 @@ class MyNavbar extends Component {
   }
 }
 
-export default MyNavbar;
+export default Appnavbar;
