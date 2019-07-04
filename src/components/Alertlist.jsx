@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Alertevent from "./Alertevent";
 import axios from "axios";
-import path from "../services/storage";
+import { getalldata } from "../services/storage";
 
 class Alertlist extends Component {
   constructor(props) {
@@ -17,7 +17,7 @@ class Alertlist extends Component {
       )
       .then(res => {
         const stocks = res.data;
-        console.log(path);
+        console.log(getalldata("alerts"));
         this.setState({ stocks });
       });
   }
